@@ -18,7 +18,7 @@
 
 ## 📋 Sobre o Projeto
 
-API REST production-ready desenvolvida com **FastAPI** implementando um sistema completo de gerenciamento de tarefas. O projeto demonstra boas práticas de desenvolvimento backend incluindo autenticação JWT, validação de dados, testes automatizados e documentação automática.
+API REST desenvolvido com **FastAPI** implementando um sistema completo de gerenciamento de tarefas. O projeto inclui autenticação JWT, validação de dados, testes automatizados e documentação automática.
 
 ### 🎯 Objetivo
 
@@ -44,7 +44,6 @@ Criar uma API REST escalável e bem arquitetada que sirva como referência para 
 - **Pytest** - Framework de testes
 - **Pytest-cov** - Cobertura de testes
 - **Black** - Formatação de código
-- **Flake8** - Linting
 
 ### Autenticação
 - **JWT** - JSON Web Tokens
@@ -85,11 +84,11 @@ Criar uma API REST escalável e bem arquitetada que sirva como referência para 
 
 ### Pré-requisitos
 
-```bash
+
 Python 3.8 ou superior
 PostgreSQL 12+
 pip (gerenciador de pacotes Python)
-```
+
 
 ### Instalação
 
