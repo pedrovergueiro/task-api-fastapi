@@ -1,32 +1,27 @@
 # Task API — FastAPI
 
-Uma API REST completa pra gerenciamento de tarefas. Foi o projeto onde me aprofundei de verdade no ecossistema FastAPI e aprendi como construir um backend mais robusto.
+API REST pra gerenciamento de tarefas que construí pra aprender como funciona um backend completo de verdade — não o tutorial de 20 minutos do YouTube, mas um projeto com autenticação, banco de dados, testes e documentação.
 
-Implementei autenticação com JWT, banco de dados com SQLAlchemy, validação de dados com Pydantic e uma cobertura básica de testes. Provavelmente o projeto de backend mais completo que fiz até então.
+Implementei autenticação JWT do zero (sem biblioteca mágica), modelei o banco com SQLAlchemy, escrevi testes com pytest e configurei o Swagger automático que o FastAPI gera. A parte de JWT foi onde mais aprendi — entender como o token é assinado, validado e invalidado fez muita coisa fazer sentido.
 
-## O que aprendi
-- Como o FastAPI gera documentação automática (Swagger/ReDoc)
-- Autenticação JWT e como proteger rotas
-- SQLAlchemy para modelagem e consulta de dados
-- A importância de escrever testes desde o início
+## Endpoints
+
+| Método | Rota | Descrição |
+|--------|------|-----------|
+| POST | `/auth/register` | Criar conta |
+| POST | `/auth/login` | Autenticar e receber token |
+| GET | `/tasks` | Listar tarefas do usuário autenticado |
+| POST | `/tasks` | Criar tarefa |
+| PUT | `/tasks/{id}` | Atualizar tarefa |
+| DELETE | `/tasks/{id}` | Remover tarefa |
 
 ## Como rodar
 
 ```bash
 pip install -r requirements.txt
 python run.py
-# Acesse: http://localhost:8000/docs
+# Documentação: http://localhost:8000/docs
 ```
-
-## Endpoints principais
-| Método | Rota | Descrição |
-|--------|------|-----------|
-| POST | /auth/register | Criar conta |
-| POST | /auth/login | Autenticar |
-| GET | /tasks | Listar tarefas |
-| POST | /tasks | Criar tarefa |
-| PUT | /tasks/{id} | Atualizar |
-| DELETE | /tasks/{id} | Remover |
 
 ## Stack
 Python · FastAPI · SQLAlchemy · PostgreSQL · JWT · pytest
